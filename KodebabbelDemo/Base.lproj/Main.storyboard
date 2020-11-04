@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="KodebabbelDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yue-ba-ORk">
+                                <rect key="frame" x="20" y="64" width="374" height="404"/>
+                                <connections>
+                                    <segue destination="kY7-jW-9A5" kind="embed" id="jck-YZ-VhM"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x5r-zz-7bW" customClass="OrbView" customModule="KodebabbelDemo" customModuleProvider="target">
+                                <rect key="frame" x="182" y="528" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="aYq-gn-MpI"/>
+                                    <constraint firstAttribute="width" secondItem="x5r-zz-7bW" secondAttribute="height" multiplier="1:1" id="ens-RS-PYj"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" systemColor="systemIndigoColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhf-7n-Q2B">
+                                <rect key="frame" x="136" y="488" width="142" height="30"/>
+                                <state key="normal" title="Show me some cats!"/>
+                                <connections>
+                                    <segue destination="Bqo-cs-XGj" kind="presentation" id="cBr-4y-EZn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="Yue-ba-ORk" secondAttribute="leading" constant="-20" id="0nS-ki-rID"/>
+                            <constraint firstItem="bhf-7n-Q2B" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Rd9-km-Lkp"/>
+                            <constraint firstItem="bhf-7n-Q2B" firstAttribute="top" secondItem="Yue-ba-ORk" secondAttribute="bottom" constant="20" id="WmK-au-5pb"/>
+                            <constraint firstItem="x5r-zz-7bW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gfn-vp-yEV"/>
+                            <constraint firstItem="Yue-ba-ORk" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="lBh-zi-Xrv"/>
+                            <constraint firstItem="Yue-ba-ORk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="o8j-vJ-sQV"/>
+                            <constraint firstItem="Yue-ba-ORk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-20" id="u5J-dB-RSV"/>
+                            <constraint firstItem="x5r-zz-7bW" firstAttribute="top" secondItem="bhf-7n-Q2B" secondAttribute="bottom" constant="10" id="ugX-wW-PEa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="orbView" destination="x5r-zz-7bW" id="fXL-xX-XQU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121.73913043478262" y="114.50892857142857"/>
+        </scene>
+        <!--Kodebabbel View Controller-->
+        <scene sceneID="lDS-vx-iaP">
+            <objects>
+                <viewController id="kY7-jW-9A5" customClass="KodebabbelViewController" customModule="KodebabbelDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yuk-wO-jss">
+                        <rect key="frame" x="0.0" y="0.0" width="374" height="404"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kodebabbel" translatesAutoresizingMaskIntoConstraints="NO" id="DdV-Ko-WSr">
+                                <rect key="frame" x="20" y="20" width="334" height="364"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="77M-hP-Yor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="DdV-Ko-WSr" firstAttribute="leading" secondItem="Yuk-wO-jss" secondAttribute="leading" constant="20" id="1cn-9n-VCf"/>
+                            <constraint firstItem="DdV-Ko-WSr" firstAttribute="top" secondItem="Yuk-wO-jss" secondAttribute="top" constant="20" id="TjA-PS-tba"/>
+                            <constraint firstAttribute="bottom" secondItem="DdV-Ko-WSr" secondAttribute="bottom" constant="20" id="WA8-3v-wjb"/>
+                            <constraint firstAttribute="trailing" secondItem="DdV-Ko-WSr" secondAttribute="trailing" constant="20" id="fnw-EL-1AS"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="SEE-rn-kJS" appends="YES" id="2dC-9d-hMC"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="DdV-Ko-WSr" id="f36-6w-0JY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uh0-hi-Cj9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="SEE-rn-kJS">
+                    <connections>
+                        <action selector="imageTapped:" destination="kY7-jW-9A5" id="ALA-mK-zGr"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="946" y="-20"/>
+        </scene>
+        <!--RandomCat-->
+        <scene sceneID="hJC-fh-zhR">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RandomCat" id="Bqo-cs-XGj" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="deS-Zl-2FB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="922" y="283"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="kodebabbel" width="860" height="180"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

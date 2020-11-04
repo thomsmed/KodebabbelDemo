@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d0o-qB-nFq">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Random Cat View Controller-->
+        <scene sceneID="AUe-c5-bQq">
+            <objects>
+                <viewController id="d0o-qB-nFq" customClass="RandomCatViewController" customModule="KodebabbelDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lnb-cj-V5K">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gN0-jm-udg">
+                                <rect key="frame" x="20" y="64" width="374" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="750" constant="500" id="ZZU-8f-K8O"/>
+                                </constraints>
+                                <string key="highlightedImage" base64-UTF8="YES">
+CQ
+</string>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lf-QX-oTO">
+                                <rect key="frame" x="20" y="801" width="374" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="More!"/>
+                                <connections>
+                                    <action selector="anotherCatPlease:" destination="d0o-qB-nFq" eventType="touchUpInside" id="aVb-2h-ooH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Z9t-S1-ZAy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gN0-jm-udg" firstAttribute="leading" secondItem="Z9t-S1-ZAy" secondAttribute="leading" constant="20" id="0M7-Kt-kBc"/>
+                            <constraint firstItem="Z9t-S1-ZAy" firstAttribute="trailing" secondItem="0lf-QX-oTO" secondAttribute="trailing" constant="20" id="7CQ-sb-Iny"/>
+                            <constraint firstItem="0lf-QX-oTO" firstAttribute="leading" secondItem="Z9t-S1-ZAy" secondAttribute="leading" constant="20" id="9hN-Nj-0nr"/>
+                            <constraint firstItem="gN0-jm-udg" firstAttribute="top" secondItem="Z9t-S1-ZAy" secondAttribute="top" constant="20" id="O8j-Cv-Pze"/>
+                            <constraint firstItem="0lf-QX-oTO" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gN0-jm-udg" secondAttribute="bottom" constant="20" id="WYT-vF-QPW"/>
+                            <constraint firstItem="Z9t-S1-ZAy" firstAttribute="bottom" secondItem="0lf-QX-oTO" secondAttribute="bottom" constant="20" id="ofw-gL-hiO"/>
+                            <constraint firstItem="Z9t-S1-ZAy" firstAttribute="trailing" secondItem="gN0-jm-udg" secondAttribute="trailing" constant="20" id="wOW-gf-o8c"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="catImage" destination="gN0-jm-udg" id="tZp-yh-2F5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fhi-7G-ei6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="70" y="84"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image width="128" height="128">
+            <string key="name" base64-UTF8="YES">
+CQ
+</string>
+        </image>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
